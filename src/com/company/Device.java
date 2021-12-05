@@ -24,4 +24,18 @@ public class Device {
     public String getColor(){
         return color;
     }
+    public Integer getAge(){
+        return 2021 - yearOfProduction + 1 ;
+    }
+    public void turnOn(){
+        System.out.println("Wsciskam guzik");
+        System.out.println("Czekam");
+        System.out.println("Czekam");
+        System.out.println("Czekam");
+        System.out.println("Czekam");
+        System.out.println("o jest, logo się wyświetla");
+    }
+    public boolean isTurnedOn(){
+        return true;
+    }
 }
