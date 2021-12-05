@@ -17,7 +17,7 @@ public class Animal {
 
     public void Feed() {
         if(!this.isAlive) {
-            System.out.println("Nie mozesz nakarmic martwego zwierzaka, halo policja!!");
+            System.out.println("Nie mozesz nakarmic nie żyjacego zwierzaka, HALO POLICJA!!");
             return;
         }
         this.weight += 1.0;
