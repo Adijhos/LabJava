@@ -1,65 +1,42 @@
 package com.company.animals;
+public class Animal{
+        final static Double DEFAULT_CAT_WEIGHT = 2.0;
+        public static final Double DEFAULT_DOG_WEIGHT = 10.6;
+        public static final double DEFAULT_WEIGHT = 1.0;
 
-public class Animal {
-    private String species;
-    private boolean canFly;
-    private int legs;
-    public boolean isAlive;
-    public double weight;
+        final String species;
+        Double weight;
+        String name;
+        Boolean isAlive;
 
-    public Animal(String species, boolean canFly, int legs, boolean isAlive, double weight) {
-        this.species = species;
-        this.canFly = canFly;
-        this.legs = legs;
-        this.isAlive = isAlive;
-        this.weight = weight;
+public Animal(String species) {
+    this.isAlive = true;
+    this species.species;
+    if (this.species.equals("canis")) {
+        this.weight = DEFAULT_DOG_WEIGHT;
+    } else if (this.species.equals("felis")) {
+        this.weight = DEFAULT_CAT_WEIGHT;
+    } else {
+        this.weight = DEFAULT_WEIGHT;
     }
-
-    public void feed() {
-        if(!this.isAlive) {
-            System.out.println("Nie mozesz nakarmic nie żyjacego zwierzaka, HALO POLICJA!!");
-            return;
-        }
-        this.weight += 1.0;
-        System.out.println(this.species + " nakarmiony, teraz wazy " + this.weight + "kg");
-    }
-
-    public String getSpecies() {
-        return species;
-    }
-
-    public void feed(){
-        this.feed(DEFAULT_FOOD_WEIGHT);
-    }
-
-    public void feed(Double foodWeight){
-        if (this.isAlive){
-            this.weight += foodWeight;
-            System.out.println("thx for food");
-        }else {
-            System.out.println("too late bro");
+    void feed() {
+        if (this.isAlive) {
+            this.weight += 1;
+            System.out.println("dzieki za jedzonko");
+        } else {
+            System.out.println("za pozno ;cc");
         }
     }
-    public double getWeight() {
-        return weight;
-    }
-
-    public void GoForWalk() {
-        if(!this.isAlive) {
-            System.out.println("Nie mozesz wyprowadzic martwego zwierzaka, halo policja!!");
-            return;
+    void takeForAWalk() {
+        if (this.isAlive) {
+            this.weight -= 1;
+            System.out.println("nice walk :D");
+            if (this.weight =< 0){
+                this.isAlive = false;
+                }
+            } else {
+                System.out.println("POLICE HALO THERE IS SONE DEAD ANERAL HERE");
+            }
         }
-
-        this.weight -= 1.0;
-        if(this.weight <= 0.0) {
-            this.isAlive = false;
-            System.out.println(this.species + " umarl");
-        }
-    }
-    public void feed(Double foodWeight){
-
-    }
-
-    private class DEFAULT_FOOD_WEIGHT {
     }
 }

@@ -1,17 +1,31 @@
 package com.company.devices;
 
-import com.company.animals.Animal;
+import com.company.animals.Human;
 
 public class Main {
-
     public static void main(String[] args) {
 
-        Animal dog = new Animal("Burek", true, 3, true, 5.0);
-        Animal cat = new Animal("Marek", false, 7, false, 2.5);
+        Car fiat = new Car("Ford", "Mustang", 2016);
+        Car passerati = new Car("Jaguar", "XJ220", 2004);
+        Phone iphone = new Phone( "Honor", "20", 2020, (int) 4.3, 3);
+        Phone xiaomi = new Phone("xiaomi", "mi8", 2018, 6.8, 8, "Android",
+                System.out.println("model: " + fiat.model);
+        System.out.println("producer:" + fiat.producer);
+        System.out.println("rok produkcji: " + fiat.yearOfProduction);
+        System.out.println(fiat);
 
-        Car firstCar = new Car("Porshe", "911", 2004, "Black", 3.0);
-        Phone firstPhone = new Phone("Apple", "iPhone 11", 2020, 8, 64);
+        System.out.println(iphone.getRamSize());
+        System.out.println(xiaomi.getRamSize());
 
-        System.out.println(firstPhone);
+        Human me = new Human();
+        System.out.println(me.getSalary());
+
+        me.setSalary(1000.00);
+
+        me.feed();
+        me.takeForAWalk();
+        System.out.println(me.species);
+        System.out.println(me.weight);
+        System.out.println(me.firstName);
     }
 }
