@@ -38,4 +38,6 @@ public class Device {
     public boolean isTurnedOn(){
         return true;
     }
+
+
 }
