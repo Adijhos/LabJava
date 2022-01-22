@@ -1,5 +1,6 @@
 package com.company.devices;
 
+import com.company.animals.Animal;
 import com.company.animals.Human;
 
 public class Main {
@@ -27,5 +28,11 @@ public class Main {
         System.out.println(me.species);
         System.out.println(me.weight);
         System.out.println(me.firstName);
+
+        System.out.println(ford.getAge());
+
+    Animal cat = new Animal("felis");
+    Human brotherInLow = new Human();
+    ford.sale(me, brotherInLow, 80000);
     }
 }

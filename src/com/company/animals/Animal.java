@@ -1,5 +1,8 @@
 package com.company.animals;
-public class Animal{
+
+import com.company.Saleable;
+
+public class Animal implements Saleable {
         final static Double DEFAULT_CAT_WEIGHT = 2.0;
         public static final Double DEFAULT_DOG_WEIGHT = 10.6;
         public static final double DEFAULT_WEIGHT = 1.0;
@@ -38,5 +41,10 @@ public Animal(String species) {
                 System.out.println("POLICE HALO THERE IS SONE DEAD ANERAL HERE");
             }
         }
+    }
+
+    @Override
+    public void sale(Human seller, Human buyer, Double price) {
+
     }
 }

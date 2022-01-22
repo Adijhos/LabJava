@@ -1,9 +1,16 @@
 package com.company.animals;
 
+import com.company.devices.Car;
+import com.company.devices.Phone;
+
 public class Human {
     String firstName;
     String lastName;
     private Double salary;
+    public Double cash;
+    Car car;
+    Phone mobile;
+    Animal pet;
 
     public Human(String species){
         super("homo sapiens");

@@ -12,6 +12,10 @@ public class Device {
         this.yearOfProduction = yearOfProduction;
         this.color = color;
     }
+
+    public Device() {
+    }
+
     public String getProducer(){
         return producer;
     }
