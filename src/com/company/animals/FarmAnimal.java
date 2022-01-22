@@ -9,5 +9,6 @@ public class FarmAnimal extends Animal implements Edible {
     public void beEaten() {
         this.isAlive = false;
         this.weight = 0.0;
+        System.out.println(this.species + "was eaten");
     }
 }

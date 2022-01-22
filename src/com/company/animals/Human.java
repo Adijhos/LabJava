@@ -4,8 +4,8 @@ import com.company.devices.Car;
 import com.company.devices.Phone;
 
 public class Human {
-    String firstName;
-    String lastName;
+    public String firstName;
+    public String lastName;
     private Double salary;
     public Double cash;
     Car car;

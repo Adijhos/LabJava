@@ -2,6 +2,7 @@ package com.company.devices;
 
 import com.company.animals.Animal;
 import com.company.animals.Human;
+import com.company.animals.Pet;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,13 +26,14 @@ public class Main {
 
         me.feed();
         me.takeForAWalk();
-        System.out.println(me.species);
-        System.out.println(me.weight);
+        System.out.println(me.getSpecies);
+        System.out.println(me.getWeight);
         System.out.println(me.firstName);
 
         System.out.println(ford.getAge());
 
-    Animal cat = new Animal("felis");
+    Animal cat = new Pet("felis");
+
     Human brotherInLow = new Human();
     ford.sale(me, brotherInLow, 80000);
     }

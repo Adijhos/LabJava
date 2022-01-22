@@ -6,15 +6,24 @@ public class Animal implements Saleable {
         final static Double DEFAULT_CAT_WEIGHT = 2.0;
         public static final Double DEFAULT_DOG_WEIGHT = 10.6;
         public static final double DEFAULT_WEIGHT = 1.0;
+    private static final Object DEFAULT_FOOD_WEIGHT = ;
 
-        final String species;
-        Double weight;
+    final String species;
+        protected Double weight;
         String name;
         Boolean isAlive;
 
-public Animal(String species) {
+    public String getSpecies() {
+        return species;
+    }
+
+    public Double getWeight() {
+        return weight;
+    }
+
+    public Animal(String species, Double foodWeight) {
     this.isAlive = true;
-    this species.species;
+    this.species =species;
     if (this.species.equals("canis")) {
         this.weight = DEFAULT_DOG_WEIGHT;
     } else if (this.species.equals("felis")) {
@@ -22,15 +31,21 @@ public Animal(String species) {
     } else {
         this.weight = DEFAULT_WEIGHT;
     }
-    void feed() {
-        if (this.isAlive) {
-            this.weight += 1;
-            System.out.println("dzieki za jedzonko");
+
+    public void feed() {
+        this.feed(DEFAULT_FOOD_WEIGHT);
+    }
+
+    public void feed(Double foodWeight){
+        if (this.isAlive){
+            this.weight += foodWeight;
+            System.out.println("Dzieki za jedzenie");
         } else {
-            System.out.println("za pozno ;cc");
+            System.out.println("too late");
         }
     }
-    void takeForAWalk() {
+
+    public void takeForAWalk() {
         if (this.isAlive) {
             this.weight -= 1;
             System.out.println("nice walk :D");
