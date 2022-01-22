@@ -42,7 +42,7 @@ public class Phone {
     public void installAnApp(String appName){
         System.out.println("intsalowanie aplikacji z listy");
         for(String apName : appNames){
-            this.installAnApp(appName);
+            this.installAnApp(appName, DEFAULT_APP_VERSION);
         }
     }
     public void installAnApp(String appName, String version){
