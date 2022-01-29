@@ -82,5 +82,46 @@ public class Main {
         anotherFamily.add(brotherInLow);
         System.out.println(anotherFamily.size());
 
+        Human student = new Human();
+        Human teacher = new Human();
+        Human dean = new Human();
+
+        ford.value = 10000;
+        tesla.value = 100000;
+        citroen.value = 50000;
+        student.cash = 23252.00;
+        teacher.cash = 98642.00;
+        dean.cash = 436436.00;
+
+        student.addCar(ford);
+        student.addCar(tesla);
+        dean.addCar(citroen);
+
+        System.out.println("Ilośc pieniędzy studenta przed sprzedażą samochodu = " + student.cash);
+        System.out.println("Ilośc pieniędzy nauczyciela przed kupnem samochodu = " + teacher.cash);
+        ford.Sale(student, teacher, 2999.0);
+        System.out.println("Ilośc pieniędzy studenta po sprzedaży samochodu = " + student.cash);
+        System.out.println("Ilośc pieniędzy nauczyciela po kupnie samochodu = " + teacher.cash);
+        teacher.addCar(ford);
+        tesla.Sale(teacher, dean, 49999.0);
+        System.out.println("Ilośc pieniędzy nauczyciela po sprzedaży samochodu = " + student.cash);
+        System.out.println("Ilośc pieniędzy dziekana po kupnie samochodu = " + teacher.cash);
+        dean.addCar(tesla);
+        citroen.Sale(dean, teacher, 22499.0);
+        System.out.println("Ilośc pieniędzy dziekana po sprzedaży samochodu = " + student.cash);
+        System.out.println("Ilośc pieniędzy nauczyciela po kupnie samochodu = " + teacher.cash);
+        teacher.addCar(citroen);
+
+        System.out.println("Wartosc garazu dziekana = " + dean.getGarageValue() + " PLN");
+        System.out.println("Wartosc garazu nauczyciela = " + teacher.getGarageValue() + " PLN");
+
+        System.out.println(dean.hasFreeSpace());
+        System.out.println(teacher.hasFreeSpace());
+        System.out.println(dean.hasCar(tesla));
+        System.out.println(teacher.hasCar(ford));
+        student.carList();
+        teacher.carList();
+        dean.carList();
+
 
     }
