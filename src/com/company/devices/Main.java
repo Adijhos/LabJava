@@ -12,40 +12,6 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
 
-        Car fiat = new Car("Ford", "Mustang", 2016);
-        Car passerati = new Car("Jaguar", "XJ220", 2004);
-        Phone iphone = new Phone( "Honor", "20", 2020, (int) 4.3, 3);
-        Phone xiaomi = new Phone("xiaomi", "mi8", 2018, 6.8, 8, "Android",
-                System.out.println("model: " + fiat.model);
-        System.out.println("producer:" + fiat.producer);
-        System.out.println("rok produkcji: " + fiat.yearOfProduction);
-        System.out.println(fiat);
-
-        System.out.println(iphone.getRamSize());
-        System.out.println(xiaomi.getRamSize());
-
-        Human me = new Human();
-        System.out.println(me.getSalary());
-
-        me.setSalary(1000.00);
-
-        me.feed();
-        me.takeForAWalk();
-        System.out.println(me.getSpecies);
-        System.out.println(me.getWeight);
-        System.out.println(me.firstName);
-
-        System.out.println(ford.getAge());
-
-    Animal cat = new Pet("felis");
-
-    Human brotherInLow = new Human();
-    ford.sale(me, brotherInLow, 80000);
-
-    iphone.installAnApp("messenger");
-    iphone.installAnApp("tiktok");
-    iphone.installAnApp("facebook");
-
         List<String> apps = new ArrayList<>();
         apps.add("yt");
         apps.add("twitter");
@@ -97,31 +63,13 @@ public class Main {
         student.addCar(tesla);
         dean.addCar(citroen);
 
-        System.out.println("Ilośc pieniędzy studenta przed sprzedażą samochodu = " + student.cash);
-        System.out.println("Ilośc pieniędzy nauczyciela przed kupnem samochodu = " + teacher.cash);
-        ford.Sale(student, teacher, 2999.0);
-        System.out.println("Ilośc pieniędzy studenta po sprzedaży samochodu = " + student.cash);
-        System.out.println("Ilośc pieniędzy nauczyciela po kupnie samochodu = " + teacher.cash);
-        teacher.addCar(ford);
-        tesla.Sale(teacher, dean, 49999.0);
-        System.out.println("Ilośc pieniędzy nauczyciela po sprzedaży samochodu = " + student.cash);
-        System.out.println("Ilośc pieniędzy dziekana po kupnie samochodu = " + teacher.cash);
-        dean.addCar(tesla);
-        citroen.Sale(dean, teacher, 22499.0);
-        System.out.println("Ilośc pieniędzy dziekana po sprzedaży samochodu = " + student.cash);
-        System.out.println("Ilośc pieniędzy nauczyciela po kupnie samochodu = " + teacher.cash);
-        teacher.addCar(citroen);
+        System.out.println("Kto był włascicielem? " + ford.checkOwners());
+        System.out.println("Kto był włascicielem? " + tesla.checkOwners());
+        System.out.println("Liczba transakcji danego pojazdu: " + ford.transactionCount());
 
-        System.out.println("Wartosc garazu dziekana = " + dean.getGarageValue() + " PLN");
-        System.out.println("Wartosc garazu nauczyciela = " + teacher.getGarageValue() + " PLN");
-
-        System.out.println(dean.hasFreeSpace());
-        System.out.println(teacher.hasFreeSpace());
-        System.out.println(dean.hasCar(tesla));
-        System.out.println(teacher.hasCar(ford));
         student.carList();
         teacher.carList();
         dean.carList();
 
-
     }
+}
